@@ -1,0 +1,4 @@
+com\imooc\controller\PassportController.class
+com\imooc\Knife4jConfig.class
+com\imooc\controller\HelloController.class
+com\imooc\intercepter\PassportInterceptor.class

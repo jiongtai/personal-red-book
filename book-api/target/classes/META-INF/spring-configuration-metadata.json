@@ -1,0 +1,11 @@
+{
+  "groups": [],
+  "properties": [
+    {
+      "name": "spring.datasource.redis.host",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.redis.host."
+    }
+  ],
+  "hints": []
+}
