@@ -54,6 +54,9 @@ public class PassportController extends BaseInfoProperties {
     @PostMapping("login")
     @ApiOperation(value = "login 登陆注册")
     public Object login(@Valid @RequestBody RegistLoginBo registLoginBo, HttpServletRequest request){
+        /**
+         * 判断用户是否存在
+         */
         return GraceJSONResult.ok();
     }
 
