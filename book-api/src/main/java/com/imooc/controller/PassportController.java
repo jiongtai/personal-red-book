@@ -9,12 +9,10 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.util.Map;
 
 @Slf4j
 @RestController
@@ -55,11 +53,7 @@ public class PassportController extends BaseInfoProperties {
 
     @PostMapping("login")
     @ApiOperation(value = "login 登陆注册")
-    public Object login(@Valid @RequestBody RegistLoginBo registLoginBo, BindingResult result, HttpServletRequest request){
-        if (result.hasErrors()){
-            Map<String,String> error = this.getErrors(result);
-            return GraceJSONResult.errorMap(error);
-        }
+    public Object login(@Valid @RequestBody RegistLoginBo registLoginBo, HttpServletRequest request){
         return GraceJSONResult.ok();
     }
 

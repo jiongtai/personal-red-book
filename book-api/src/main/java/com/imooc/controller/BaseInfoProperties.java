@@ -21,19 +21,4 @@ public class BaseInfoProperties {
         this.redis = redis;
     }
 
-    /**
-     * 获取参数校验错误
-     */
-    public Map<String, String> getErrors(BindingResult result) {
-        Map<String, String> map = new HashMap<>();
-        List<FieldError> errorList = result.getFieldErrors();
-        for (FieldError ff : errorList) {
-            // 错误所对应的属性字段名
-            String field = ff.getField();
-            // 错误的信息
-            String msg = ff.getDefaultMessage();
-            map.put(field, msg);
-        }
-        return map;
-    }
 }
